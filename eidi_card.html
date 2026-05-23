@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Card</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a1628;
+            font-family: Georgia, serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(0px); }
+            50%  { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes borderGlow {
+            0%   { box-shadow: 0 0 8px #b8922a; }
+            50%  { box-shadow: 0 0 25px #e8c05a, 0 0 50px #b8922a; }
+            100% { box-shadow: 0 0 8px #b8922a; }
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #b8922a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            padding: 30px 20px;
+            background-color: #0c1e3a;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #b8922a;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .card h1 {
+            color: #d4a940;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            margin-top: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* ── Tablet ── */
+        @media (max-width: 768px) {
+            .card {
+                max-width: 85%;
+                padding: 25px 15px;
+            }
+
+            .card img {
+                max-width: 220px;
+            }
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .card {
+                max-width: 95%;
+                padding: 20px 12px;
+            }
+
+            .card img {
+                max-width: 180px;
+            }
+
+            .card h1 {
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        /* ── Small mobile ── */
+        @media (max-width: 320px) {
+            .card {
+                max-width: 98%;
+                padding: 15px 10px;
+            }
+
+            .card img {
+                max-width: 140px;
+            }
+
+            .card h1 {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ── Large screen / TV ── */
+        @media (min-width: 1400px) {
+            .card {
+                max-width: 500px;
+            }
+
+            .card img {
+                max-width: 350px;
+            }
+
+            .card h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <script src="eid.js"></script>
+    <div class="card">
+        <img src="eid_ul_adha_card.png" alt="Eid ul Adha Card">
+        <h1>From Muhammad Ahsan Naeem</h1>
+    </div>
+</body>
+</html>
